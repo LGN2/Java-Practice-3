@@ -27,11 +27,19 @@ public class TrapezoidCalculator {
         IO.println("Enter the Height:");
         height = h1.nextDouble();
 
-        if (a <= 0 || b <= 0 || c <= 0 || base <= 0 || height <= 0) {
+        if (b1 <= 0 || b2 <= 0 || l1 <= 0 || l2 <= 0 || height <= 0) {
             IO.println("Invalid input. All values must be greater than zero.");
         } else {
-            area = (base * height) / 2;
-            perimeter = a + b + c;
+            area = ((b1 + b2) * height)/2;
+            perimeter = b1 + b2 + l1 + l2;
+        }
+
+        if (a == b && b == c) {
+            type = "Equilateral";
+        } else if (a == b || a == 3 || b == c) {
+            type = "Isosceles";
+        } else {
+            type = "Scalene";
         }
     }
 }
