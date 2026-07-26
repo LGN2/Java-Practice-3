@@ -29,6 +29,10 @@ public class StudentListManager {
         }else {
             IO.println("The Student is not in the list");
         }
-        
+
+        students.remove("Ali");
+        for (String student : students){
+            IO.println(student);
+        }
     }
 }
