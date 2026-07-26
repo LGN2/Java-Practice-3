@@ -6,14 +6,16 @@ public class StudentListManager {
         List<String> students = new ArrayList<>();
 
         students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
-        students.add("Abdulrahman");
+        students.add("Almajd");
+        students.add("Abdulaziz");
+        students.add("Suliman");
+        students.add("Mohammed");
+        students.add("Nawaf");
+        students.add("Ali");
+        students.add("Rashed");
+        students.add("Almonther");
+        students.add("Said");
+
+        
     }
 }
