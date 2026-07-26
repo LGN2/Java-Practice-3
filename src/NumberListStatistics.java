@@ -33,10 +33,14 @@ public class NumberListStatistics {
         Integer positiveNumbers = 0;
         Integer negativeNumbers = 0;
         Integer largest;
-        Integer Smallest;
+        Integer smallest;
         Integer avg;
 
-        
+        largest = numbers.get(0);
+        smallest = numbers.get(0);
 
+        for (int number : numbers) {
+            
+        }
     }
 }
