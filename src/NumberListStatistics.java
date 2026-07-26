@@ -32,6 +32,7 @@ public class NumberListStatistics {
         Integer oddNumbers = 0;
         Integer positiveNumbers = 0;
         Integer negativeNumbers = 0;
+        Integer numberZero = 0;
         Integer largest;
         Integer smallest;
         Integer avg;
@@ -40,7 +41,32 @@ public class NumberListStatistics {
         smallest = numbers.get(0);
 
         for (int number : numbers) {
-            
+
+            if (number % 2 ==0){
+                evenNumbers ++;
+            }else {
+                oddNumbers ++;
+            }
+
+            if (number > 0){
+                positiveNumbers ++;
+            } else if (number < 0) {
+                negativeNumbers ++;
+            }else {
+                numberZero ++;
+            }
+
+            if (number > largest) {
+                largest = number;
+            }
+
+            if (number > smallest) {
+                smallest = number;
+            }
+
+            totalSum += number;
+
+            avg
         }
     }
 }
