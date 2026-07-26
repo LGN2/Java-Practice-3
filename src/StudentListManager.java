@@ -19,5 +19,9 @@ public class StudentListManager {
         for (String student : students){
             IO.println(student);
         }
+
+        IO.println("Total Students: "+students.size());
+        IO.println("First Students: "+students.getFirst());
+        IO.println("Last Students: "+students.getLast());
     }
 }
