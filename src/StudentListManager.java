@@ -23,5 +23,12 @@ public class StudentListManager {
         IO.println("Total Students: "+students.size());
         IO.println("First Students: "+students.getFirst());
         IO.println("Last Students: "+students.getLast());
+
+        if (students.contains("Ali")){
+            IO.println("The Student is in the list");
+        }else {
+            IO.println("The Student is not in the list");
+        }
+        
     }
 }
