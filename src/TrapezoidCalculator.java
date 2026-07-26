@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class TrapezoidCalculator {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Double b1;
         Double b2;
         Double l1;
@@ -30,11 +30,11 @@ public class TrapezoidCalculator {
         if (b1 <= 0 || b2 <= 0 || l1 <= 0 || l2 <= 0 || height <= 0) {
             IO.println("Invalid input. All values must be greater than zero.");
         } else {
-            area = ((b1 + b2) * height)/2;
+            area = ((b1 + b2) * height) / 2;
             perimeter = b1 + b2 + l1 + l2;
         }
 
-        if (perimeter <30) {
+        if (perimeter < 30) {
             type = "Small Trapezoid";
         } else if (perimeter <= 60) {
             type = "Medium Trapezoid";
@@ -42,13 +42,13 @@ public class TrapezoidCalculator {
             type = "Large Trapezoid";
         }
 
-        IO.println("Base 1: "+b1);
-        IO.println("Base 2: "+b2);
-        IO.println("Leg 1: "+l1);
-        IO.println("Leg 2: "+l2);
-        IO.println("Height: "+height);
-        IO.println("Area: "+area);
-        IO.println("Perimeter: "+perimeter);
-        IO.println("Type: "+type);
+        IO.println("Base 1: " + b1);
+        IO.println("Base 2: " + b2);
+        IO.println("Leg 1: " + l1);
+        IO.println("Leg 2: " + l2);
+        IO.println("Height: " + height);
+        IO.println("Area: " + area);
+        IO.println("Perimeter: " + perimeter);
+        IO.println("Type: " + type);
     }
 }
