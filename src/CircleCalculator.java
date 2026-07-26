@@ -19,8 +19,6 @@ public class CircleCalculator {
         }else{
             area = pi * (radius * radius);
             circumference = 2 * pi * radius;
-            IO.println("The Circle area is: "+area);
-            IO.println("The Circle circumference is: "+circumference);
         }
         if (radius < 5){
             classification = "Small Circle";
