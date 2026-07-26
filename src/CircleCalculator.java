@@ -5,26 +5,36 @@ public class CircleCalculator {
     public static void main(String[] args){
         Double pi = 3.14;
         Double radius;
+        Double area = 0.0;
+        Double circumference = 0.0;
+        String classification;
 
         Scanner sc = new Scanner(System.in);
         IO.println("Enter the Radius of the circle:");
-        Double radius = sc.nextDouble();
+        radius = sc.nextDouble();
 
 
         if (radius <= 0){
             IO.println("Invalid radius must be greater than zero.");
         }else{
-            Double area = pi * (radius * radius);
-            Double circumference = 2 * pi * radius;
+            area = pi * (radius * radius);
+            circumference = 2 * pi * radius;
             IO.println("The Circle area is: "+area);
             IO.println("The Circle circumference is: "+circumference);
         }
         if (radius < 5){
-            IO.println("Small Circle");
-        } else if (radius < 15) {
-            IO.println("Medium Circle");
+            classification = "Small Circle";
+        } else if (radius <= 15) {
+            classification = "Medium Circle";
+
         }else{
-            IO.println("Large Circle");
+            classification = "Large Circle";
+
         }
+
+        IO.println("Radius: "+radius);
+        IO.println("Area: "+area);
+        IO.println("Circumference: "+circumference);
+        IO.println("Classification: "+classification);
     }
 }
