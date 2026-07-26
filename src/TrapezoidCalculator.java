@@ -7,8 +7,8 @@ public class TrapezoidCalculator {
         Double l1;
         Double l2;
         Double height;
-        Double area;
-        Double perimeter;
+        Double area = 0.0;
+        Double perimeter = 0.0;
         String type;
 
         Scanner b01 = new Scanner(System.in);
