@@ -16,6 +16,8 @@ public class StudentListManager {
         students.add("Almonther");
         students.add("Said");
 
-        
+        for (String student : students){
+            IO.println(student);
+        }
     }
 }
