@@ -34,12 +34,21 @@ public class TrapezoidCalculator {
             perimeter = b1 + b2 + l1 + l2;
         }
 
-        if (a == b && b == c) {
-            type = "Equilateral";
-        } else if (a == b || a == 3 || b == c) {
-            type = "Isosceles";
+        if (perimeter <30) {
+            type = "Small Trapezoid";
+        } else if (perimeter <= 60) {
+            type = "Medium Trapezoid";
         } else {
-            type = "Scalene";
+            type = "Large Trapezoid";
         }
+
+        IO.println("Base 1: "+b1);
+        IO.println("Base 2: "+b2);
+        IO.println("Leg 1: "+l1);
+        IO.println("Leg 2: "+l2);
+        IO.println("Height: "+height);
+        IO.println("Area: "+area);
+        IO.println("Perimeter: "+perimeter);
+        IO.println("Type: "+type);
     }
 }
