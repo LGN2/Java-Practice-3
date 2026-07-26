@@ -12,5 +12,12 @@ public class TriangleCalculator {
         String type;
 
         Scanner sc = new Scanner(System.in);
+        IO.println("Enter the three sides, base and height of the triangle:");
+        a = sc.nextDouble();
+        b = sc.nextDouble();
+        c = sc.nextDouble();
+        base = sc.nextDouble();
+        height = sc.nextDouble();
+        
     }
 }
