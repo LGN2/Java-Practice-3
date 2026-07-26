@@ -50,5 +50,11 @@ public class TrapezoidCalculator {
         IO.println("Area: " + area);
         IO.println("Perimeter: " + perimeter);
         IO.println("Type: " + type);
+
+        b01.close();
+        b02.close();
+        l01.close();
+        l02.close();
+        h1.close();
     }
 }
