@@ -27,6 +27,16 @@ public class NumberListStatistics {
         numbers.add(9);
         numbers.add(10);
 
+        Integer totalSum = 0;
+        Integer evenNumbers = 0;
+        Integer oddNumbers = 0;
+        Integer positiveNumbers = 0;
+        Integer negativeNumbers = 0;
+        Integer largest;
+        Integer Smallest;
+        Integer avg;
+
         
+
     }
 }
