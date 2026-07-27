@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumberListStatistics {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         List<Integer> numbers = new ArrayList<>();
 
         numbers.add(-10);
@@ -43,18 +43,18 @@ public class NumberListStatistics {
 
         for (int number : numbers) {
 
-            if (number % 2 ==0){
-                evenNumbers ++;
-            }else {
-                oddNumbers ++;
+            if (number % 2 == 0) {
+                evenNumbers++;
+            } else {
+                oddNumbers++;
             }
 
-            if (number > 0){
-                positiveNumbers ++;
+            if (number > 0) {
+                positiveNumbers++;
             } else if (number < 0) {
-                negativeNumbers ++;
-            }else {
-                numberZero ++;
+                negativeNumbers++;
+            } else {
+                numberZero++;
             }
 
             if (number > largest) {
@@ -74,14 +74,14 @@ public class NumberListStatistics {
         for (Integer number : numbers) {
             IO.println(number);
         }
-        IO.println("Sum of Numbers: "+totalSum);
-        IO.println("Average: "+avg);
-        IO.println("Largest Number: "+largest);
-        IO.println("Smallest Number: "+smallest);
-        IO.println("Zero Number: "+numberZero);
-        IO.println("Count of Even Numbers: "+evenNumbers);
-        IO.println("Count of Odd Numbers: "+oddNumbers);
-        IO.println("Count of Positive Numbers: "+positiveNumbers);
-        IO.println("Count of Negative Numbers: "+negativeNumbers);
+        IO.println("Sum of Numbers: " + totalSum);
+        IO.println("Average: " + avg);
+        IO.println("Largest Number: " + largest);
+        IO.println("Smallest Number: " + smallest);
+        IO.println("Zero Number: " + numberZero);
+        IO.println("Count of Even Numbers: " + evenNumbers);
+        IO.println("Count of Odd Numbers: " + oddNumbers);
+        IO.println("Count of Positive Numbers: " + positiveNumbers);
+        IO.println("Count of Negative Numbers: " + negativeNumbers);
     }
 }
