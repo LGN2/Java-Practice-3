@@ -1,5 +1,5 @@
 public class StudentResultAnalyzer {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String studentName;
         Integer math;
         Integer english;
@@ -42,26 +42,30 @@ public class StudentResultAnalyzer {
         }
 
     }
+
     public static boolean validateMarks(Integer math,
                                         Integer english,
-                                        Integer science){
+                                        Integer science) {
 
         return math >= 0 && math <= 100 &&
                 science >= 0 && science <= 100 &&
                 english >= 0 && english <= 100;
     }
+
     public static Integer calculateTotal(Integer math,
                                          Integer english,
                                          Integer science) {
 
         return math + english + science;
     }
+
     public static Integer calculateAverage(Integer totalMarks,
                                            Integer subNum) {
-        return (Integer) totalMarks/subNum;
+        return (Integer) totalMarks / subNum;
     }
+
     public static Character calculateGrade(Integer averageMarks) {
-        if (averageMarks > 90){
+        if (averageMarks > 90) {
             return 'A';
         } else if (averageMarks >= 80) {
             return 'B';
@@ -69,10 +73,11 @@ public class StudentResultAnalyzer {
             return 'C';
         } else if (averageMarks >= 60) {
             return 'D';
-        }else {
+        } else {
             return 'F';
         }
     }
+
     public static String checkPerformance(Character finalGrade) {
 
         if (finalGrade == 'A') {
@@ -87,6 +92,7 @@ public class StudentResultAnalyzer {
             return "Needs Improvement";
         }
     }
+
     public static void displayReport(
             String studentName,
             Integer math,
