@@ -1,5 +1,5 @@
 public class EmployeeSalaryCalculator {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         String employeeName;
         Integer basicSalary;
         Integer bonusAmount;
@@ -23,21 +23,24 @@ public class EmployeeSalaryCalculator {
                 salaryStatus
         );
     }
+
     public static Integer calculateNetSalary(Integer basicSalary,
-                                            Integer bonus,
-                                            Integer deduction) {
+                                             Integer bonus,
+                                             Integer deduction) {
 
         return basicSalary + bonus - deduction;
     }
-    public static String checkSalaryStatus(Integer netSalary){
-        if (netSalary < 500){
+
+    public static String checkSalaryStatus(Integer netSalary) {
+        if (netSalary < 500) {
             return "Low Salary";
         } else if (netSalary <= 1500) {
             return "Medium Salary";
-        }else {
+        } else {
             return "High Salary";
         }
     }
+
     public static void displaySalaryDetails(
             String employeeName,
             Integer basicSalary,
