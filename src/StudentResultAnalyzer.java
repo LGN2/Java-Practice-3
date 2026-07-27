@@ -7,7 +7,7 @@ public class StudentResultAnalyzer {
         Integer totalMarks;
         Integer subNum;
         Integer averageMarks;
-        Integer finalGrade;
+        Character finalGrade;
         String performanceStatus;
 
         studentName = "Almajd Salim";
@@ -18,12 +18,29 @@ public class StudentResultAnalyzer {
 
         if (validateMarks(math, english, science)) {
 
+            totalMarks = calculateTotal(math, english, science);
+
+            averageMarks = calculateAverage(totalMarks, subNum);
+
+            finalGrade = calculateGrade(averageMarks);
+
+            performanceStatus = checkPerformance(finalGrade);
+
+            displayReport(
+                    studentName,
+                    math,
+                    english,
+                    science,
+                    totalMarks,
+                    averageMarks,
+                    finalGrade,
+                    performanceStatus);
 
         } else {
 
             System.out.println("Invalid marks. Please check the student grades.");
         }
-        totalMarks = calculateTotal(math,english,science);
+
     }
     public static boolean validateMarks(Integer math,
                                         Integer english,
@@ -38,5 +55,55 @@ public class StudentResultAnalyzer {
                                          Integer science) {
 
         return math + english + science;
+    }
+    public static Integer calculateAverage(Integer totalMarks,
+                                           Integer subNum) {
+        return (Integer) totalMarks/subNum;
+    }
+    public static Character calculateGrade(Integer averageMarks) {
+        if (averageMarks > 90){
+            return 'A';
+        } else if (averageMarks >= 80) {
+            return 'B';
+        } else if (averageMarks >= 70) {
+            return 'C';
+        } else if (averageMarks >= 60) {
+            return 'D';
+        }else {
+            return 'F';
+        }
+    }
+    public static String checkPerformance(Character finalGrade) {
+
+        if (finalGrade == 'A') {
+            return "Excellent";
+        } else if (finalGrade == 'B') {
+            return "Very Good";
+        } else if (finalGrade == 'C') {
+            return "Good";
+        } else if (finalGrade == 'D') {
+            return "Satisfactory";
+        } else {
+            return "Needs Improvement";
+        }
+    }
+    public static void displayReport(
+            String studentName,
+            Integer math,
+            Integer science,
+            Integer english,
+            Integer totalMarks,
+            Integer averageMarks,
+            Character finalGrade,
+            String performanceStatus) {
+
+        System.out.println("Student Name: " + studentName);
+        System.out.println("Math: " + math);
+        System.out.println("Science: " + science);
+        System.out.println("English: " + english);
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Average Mark: " + averageMarks);
+        System.out.println("Final Grade: " + finalGrade);
+        System.out.println("Performance Status: " + performanceStatus);
     }
 }
