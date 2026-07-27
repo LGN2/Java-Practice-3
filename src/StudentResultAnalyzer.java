@@ -23,6 +23,7 @@ public class StudentResultAnalyzer {
 
             System.out.println("Invalid marks. Please check the student grades.");
         }
+        totalMarks = calculateTotal(math,english,science);
     }
     public static boolean validateMarks(Integer math,
                                         Integer english,
@@ -31,5 +32,11 @@ public class StudentResultAnalyzer {
         return math >= 0 && math <= 100 &&
                 science >= 0 && science <= 100 &&
                 english >= 0 && english <= 100;
+    }
+    public static Integer calculateTotal(Integer math,
+                                         Integer english,
+                                         Integer science) {
+
+        return math + english + science;
     }
 }
