@@ -26,6 +26,7 @@ public class NumberListStatistics {
         numbers.add(8);
         numbers.add(9);
         numbers.add(10);
+        numbers.add(2000);
 
         Integer totalSum = 0;
         Integer evenNumbers = 0;
@@ -77,6 +78,7 @@ public class NumberListStatistics {
         IO.println("Average: "+avg);
         IO.println("Largest Number: "+largest);
         IO.println("Smallest Number: "+smallest);
+        IO.println("Zero Number: "+numberZero);
         IO.println("Count of Even Numbers: "+evenNumbers);
         IO.println("Count of Odd Numbers: "+oddNumbers);
         IO.println("Count of Positive Numbers: "+positiveNumbers);
