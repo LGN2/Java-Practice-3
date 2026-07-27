@@ -13,7 +13,9 @@ public class EmployeeSalaryCalculator {
         deductionAmount = 400;
 
         netSalary = calculateNetSalary(basicSalary, bonusAmount, deductionAmount);
+
         salaryStatus = checkSalaryStatus(netSalary);
+
         displaySalaryDetails(
                 employeeName,
                 basicSalary,
