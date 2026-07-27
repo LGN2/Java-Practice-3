@@ -16,4 +16,12 @@ public class StudentResultAnalyzer {
         science = 86;
         subNum = 3;
     }
+    public static boolean validateMarks(Integer math,
+                                        Integer english,
+                                        Integer science){
+        
+        return math >= 0 && math <= 100 &&
+                science >= 0 && science <= 100 &&
+                english >= 0 && english <= 100;
+    }
 }
