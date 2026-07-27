@@ -7,10 +7,10 @@ public class EmployeeSalaryCalculator {
         Integer netSalary;
         String salaryStatus;
 
-        employeeName = "John Smith";
-        basicSalary = 1200;
-        bonusAmount = 250;
-        deductionAmount = 100;
+        employeeName = "Almajd Salim";
+        basicSalary = 350;
+        bonusAmount = 200;
+        deductionAmount = 400;
 
         netSalary = calculateNetSalary(basicSalary, bonusAmount, deductionAmount);
         salaryStatus = checkSalaryStatus(netSalary);
