@@ -35,7 +35,7 @@ public class NumberListStatistics {
         Integer numberZero = 0;
         Integer largest;
         Integer smallest;
-        Integer avg;
+        Integer avg = 0;
 
         largest = numbers.get(0);
         smallest = numbers.get(0);
@@ -66,7 +66,20 @@ public class NumberListStatistics {
 
             totalSum += number;
 
-            avg
+            avg = (Integer) totalSum / numbers.size();
+
+
         }
+        for (Integer number : numbers) {
+            IO.println(number);
+        }
+        IO.println("Sum of Numbers: "+totalSum);
+        IO.println("Average: "+avg);
+        IO.println("Largest Number: "+largest);
+        IO.println("Smallest Number: "+smallest);
+        IO.println("Count of Even Numbers: "+evenNumbers);
+        IO.println("Count of Odd Numbers: "+oddNumbers);
+        IO.println("Count of Positive Numbers: "+positiveNumbers);
+        IO.println("Count of Negative Numbers: "+negativeNumbers);
     }
 }
