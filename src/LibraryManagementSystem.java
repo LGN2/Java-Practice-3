@@ -7,7 +7,6 @@ public class LibraryManagementSystem {
 
         Scanner sc = new Scanner(System.in);
 
-        // Declare variables
         ArrayList<String> bookNames;
         ArrayList<String> authorNames;
         ArrayList<Boolean> bookAvailability;
@@ -16,12 +15,10 @@ public class LibraryManagementSystem {
         String bookName;
         Integer[] bookCounts;
 
-        // Create lists
         bookNames = new ArrayList<>();
         authorNames = new ArrayList<>();
         bookAvailability = new ArrayList<>();
 
-        // Add books
         bookNames.add("Java Programming");
         authorNames.add("John Smith");
         bookAvailability.add(true);
@@ -62,17 +59,16 @@ public class LibraryManagementSystem {
         authorNames.add("Daniel Green");
         bookAvailability.add(true);
 
-        // Repeat menu until Exit
         do {
 
-            System.out.println("\n========== LIBRARY MENU ==========");
-            System.out.println("1. Display All Books");
-            System.out.println("2. Search Book");
-            System.out.println("3. Borrow Book");
-            System.out.println("4. Return Book");
-            System.out.println("5. Display Library Report");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
+            IO.println("\n========== LIBRARY MENU ==========");
+            IO.println("1. Display All Books");
+            IO.println("2. Search Book");
+            IO.println("3. Borrow Book");
+            IO.println("4. Return Book");
+            IO.println("5. Display Library Report");
+            IO.println("6. Exit");
+            IO.print("Enter your choice: ");
 
             choice = sc.nextInt();
             sc.nextLine();
