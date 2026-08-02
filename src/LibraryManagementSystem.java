@@ -166,14 +166,14 @@ public class LibraryManagementSystem {
 
             if (bookNames.get(i).equalsIgnoreCase(bookName)) {
 
-                System.out.println("\nBook Found");
-                System.out.println("Book Name : " + bookNames.get(i));
-                System.out.println("Author    : " + authorNames.get(i));
+                IO.println("\nBook Found");
+                IO.println("Book Name : " + bookNames.get(i));
+                IO.println("Author    : " + authorNames.get(i));
 
                 if (bookAvailability.get(i)) {
-                    System.out.println("Status    : Available");
+                    IO.println("Status    : Available");
                 } else {
-                    System.out.println("Status    : Unavailable");
+                    IO.println("Status    : Unavailable");
                 }
 
                 found = true;
