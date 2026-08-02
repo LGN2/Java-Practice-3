@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class BankAccountSystem2 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -172,7 +172,7 @@ public class BankAccountSystem2 {
 
             if (accountNumbers.get(i).equals(accountNumber)) {
 
-                accountBalances.set(i,accountBalances.get(i) + amount);
+                accountBalances.set(i, accountBalances.get(i) + amount);
 
                 IO.println("Deposit Successful.");
                 IO.println("New Balance: $" + accountBalances.get(i));
@@ -204,7 +204,7 @@ public class BankAccountSystem2 {
 
                 if (accountBalances.get(i) >= amount) {
 
-                    accountBalances.set(i,accountBalances.get(i) - amount);
+                    accountBalances.set(i, accountBalances.get(i) - amount);
 
                     IO.println("Withdrawal Successful.");
                     IO.println("Remaining Balance: $" + accountBalances.get(i));
@@ -247,6 +247,7 @@ public class BankAccountSystem2 {
             IO.println("Account Not Found.");
         }
     }
+
     public static void calculateStatistics(
             ArrayList<Double> accountBalances) {
 
