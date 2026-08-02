@@ -87,7 +87,7 @@ public class BankAccountSystem1 {
 
                 case 4:
 
-                    System.out.print("Enter Account Number: ");
+                    IO.print("Enter Account Number: ");
                     accountNumber = sc.nextInt();
 
                     checkBalance(accountNumbers, balances, accountNumber);
