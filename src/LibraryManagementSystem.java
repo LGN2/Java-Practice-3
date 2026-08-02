@@ -131,7 +131,6 @@ public class LibraryManagementSystem {
         sc.close();
     }
 
-    // Display all books
     public static void displayBooks(
             ArrayList<String> bookNames,
             ArrayList<String> authorNames,
@@ -153,7 +152,6 @@ public class LibraryManagementSystem {
         }
     }
 
-    // Search for a book
     public static void searchBook(
             ArrayList<String> bookNames,
             ArrayList<String> authorNames,
@@ -182,7 +180,7 @@ public class LibraryManagementSystem {
         }
 
         if (!found) {
-            System.out.println("Book Not Found.");
+            IO.println("Book Not Found.");
         }
     }
 
@@ -203,11 +201,11 @@ public class LibraryManagementSystem {
                 if (bookAvailability.get(i)) {
 
                     bookAvailability.set(i, false);
-                    System.out.println("Book Borrowed Successfully.");
+                    IO.println("Book Borrowed Successfully.");
 
                 } else {
 
-                    System.out.println("Book Is Already Borrowed.");
+                    IO.println("Book Is Already Borrowed.");
                 }
 
                 break;
@@ -215,11 +213,10 @@ public class LibraryManagementSystem {
         }
 
         if (!found) {
-            System.out.println("Book Not Found.");
+            IO.println("Book Not Found.");
         }
     }
 
-    // Return a book
     public static void returnBook(
             ArrayList<String> bookNames,
             ArrayList<Boolean> bookAvailability,
@@ -235,14 +232,14 @@ public class LibraryManagementSystem {
 
                 bookAvailability.set(i, true);
 
-                System.out.println("Book Returned Successfully.");
+                IO.println("Book Returned Successfully.");
 
                 break;
             }
         }
 
         if (!found) {
-            System.out.println("Book Not Found.");
+            IO.println("Book Not Found.");
         }
     }
 
