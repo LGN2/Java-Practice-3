@@ -3,10 +3,10 @@ import java.util.Scanner;
 
 public class ProductInventorySystem {
     public static void main(String[] args) {
-        // Create scanner
+
         Scanner input = new Scanner(System.in);
 
-        // Declare variables
+
         ArrayList<String> productNames;
         ArrayList<Double> productPrices;
         ArrayList<Integer> productQuantities;
@@ -15,23 +15,23 @@ public class ProductInventorySystem {
         Integer[] stockCounts;
         String mostExpensiveProduct;
 
-        // Create lists
+
         productNames = new ArrayList<>();
         productPrices = new ArrayList<>();
         productQuantities = new ArrayList<>();
 
-        // Enter information for 10 products
+
         for (Integer i = 0; i < 10; i++) {
 
-            System.out.println("\nEnter Product " + (i + 1));
+            IO.println("\nEnter Product " + (i + 1));
 
-            System.out.print("Product Name: ");
+            IO.print("Product Name: ");
             productNames.add(input.nextLine());
 
-            System.out.print("Product Price: ");
+            IO.print("Product Price: ");
             productPrices.add(input.nextDouble());
 
-            System.out.print("Product Quantity: ");
+            IO.print("Product Quantity: ");
             productQuantities.add(input.nextInt());
 
             input.nextLine();
@@ -129,22 +129,22 @@ public class ProductInventorySystem {
             Integer outOfStockProducts,
             String mostExpensiveProduct) {
 
-        System.out.println("\n========== INVENTORY REPORT ==========");
+        IO.println("\n========== INVENTORY REPORT ==========");
 
         for (Integer i = 0; i < productNames.size(); i++) {
 
-            System.out.println("----------------------------------");
-            System.out.println("Product Name : " + productNames.get(i));
-            System.out.println("Price        : " + productPrices.get(i));
-            System.out.println("Quantity     : " + productQuantities.get(i));
-            System.out.println("Stock Status : " + checkStockStatus(productQuantities.get(i)));
+            IO.println("----------------------------------");
+            IO.println("Product Name : " + productNames.get(i));
+            IO.println("Price        : " + productPrices.get(i));
+            IO.println("Quantity     : " + productQuantities.get(i));
+            IO.println("Stock Status : " + checkStockStatus(productQuantities.get(i)));
         }
 
-        System.out.println("----------------------------------");
-        System.out.println("Total Inventory Value : " + totalInventoryValue);
-        System.out.println("Available Products    : " + availableProducts);
-        System.out.println("Out Of Stock Products : " + outOfStockProducts);
-        System.out.println("Most Expensive Product: " + mostExpensiveProduct);
+        IO.println("----------------------------------");
+        IO.println("Total Inventory Value : " + totalInventoryValue);
+        IO.println("Available Products    : " + availableProducts);
+        IO.println("Out Of Stock Products : " + outOfStockProducts);
+        IO.println("Most Expensive Product: " + mostExpensiveProduct);
     }
 
 }
