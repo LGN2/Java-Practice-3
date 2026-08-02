@@ -159,4 +159,33 @@ public class BankAccountSystem2 {
             System.out.println("Balance        : $" + accountBalances.get(i));
         }
     }
+
+    public static void depositMoney(
+            ArrayList<Integer> accountNumbers,
+            ArrayList<Double> accountBalances,
+            Integer accountNumber,
+            Double amount) {
+
+        Boolean found = false;
+
+        for (Integer i = 0; i < accountNumbers.size(); i++) {
+
+            if (accountNumbers.get(i).equals(accountNumber)) {
+
+                accountBalances.set(i,
+                        accountBalances.get(i) + amount);
+
+                System.out.println("Deposit Successful.");
+                System.out.println("New Balance: $" + accountBalances.get(i));
+
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+
+            System.out.println("Account Not Found.");
+        }
+    }
 }
