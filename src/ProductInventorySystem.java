@@ -61,8 +61,7 @@ public class ProductInventorySystem {
 
         for (Integer i = 0; i < productPrices.size(); i++) {
 
-            totalValue = totalValue +
-                    (productPrices.get(i) * productQuantities.get(i));
+            totalValue = totalValue + (productPrices.get(i) * productQuantities.get(i));
         }
 
         return totalValue;
@@ -132,8 +131,7 @@ public class ProductInventorySystem {
             System.out.println("Product Name : " + productNames.get(i));
             System.out.println("Price        : " + productPrices.get(i));
             System.out.println("Quantity     : " + productQuantities.get(i));
-            System.out.println("Stock Status : "
-                    + checkStockStatus(productQuantities.get(i)));
+            System.out.println("Stock Status : " + checkStockStatus(productQuantities.get(i)));
         }
 
         System.out.println("----------------------------------");
