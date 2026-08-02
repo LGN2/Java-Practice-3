@@ -210,5 +210,30 @@ public class BankAccountSystem1 {
             System.out.println("Account Not Found.");
         }
     }
+    public static void calculateStatistics(
+            ArrayList<Double> balances) {
+
+        Double totalBalance = 0.0;
+        Double highestBalance = balances.get(0);
+        Double lowestBalance = balances.get(0);
+
+        for (Double balance : balances) {
+
+            totalBalance += balance;
+
+            if (balance > highestBalance) {
+                highestBalance = balance;
+            }
+
+            if (balance < lowestBalance) {
+                lowestBalance = balance;
+            }
+        }
+
+        System.out.println("\n========== ACCOUNT STATISTICS ==========");
+        System.out.println("Total Money      : $" + totalBalance);
+        System.out.println("Highest Balance  : $" + highestBalance);
+        System.out.println("Lowest Balance   : $" + lowestBalance);
+    }
 
 }
