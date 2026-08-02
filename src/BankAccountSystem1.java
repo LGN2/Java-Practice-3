@@ -154,5 +154,39 @@ public class BankAccountSystem1 {
             System.out.println("Account Not Found.");
         }
     }
+    public static void withdrawMoney(
+            ArrayList<Integer> accountNumbers,
+            ArrayList<Double> balances,
+            Integer accountNumber,
+            Double amount) {
+
+        Boolean found = false;
+
+        for (Integer i = 0; i < accountNumbers.size(); i++) {
+
+            if (accountNumbers.get(i).equals(accountNumber)) {
+
+                found = true;
+
+                if (balances.get(i) >= amount) {
+
+                    balances.set(i, balances.get(i) - amount);
+
+                    System.out.println("Withdrawal Successful.");
+                    System.out.println("Remaining Balance: $" + balances.get(i));
+
+                } else {
+
+                    System.out.println("Insufficient Balance.");
+                }
+
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Account Not Found.");
+        }
+    }
 
 }
