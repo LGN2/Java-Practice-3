@@ -131,12 +131,12 @@ public class BankAccountSystem2 {
 
                 case 6:
 
-                    System.out.println("Thank you for using the Bank Account System.");
+                    IO.println("Thank you for using the Bank Account System.");
                     break;
 
                 default:
 
-                    System.out.println("Invalid Menu Choice.");
+                    IO.println("Invalid Menu Choice.");
             }
 
         } while (choice != 6);
