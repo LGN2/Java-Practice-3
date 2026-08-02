@@ -85,10 +85,10 @@ public class BankAccountSystem2 {
 
                 case 2:
 
-                    System.out.print("Enter Account Number: ");
+                    IO.print("Enter Account Number: ");
                     accountNumber = sc.nextInt();
 
-                    System.out.print("Enter Deposit Amount: ");
+                    IO.print("Enter Deposit Amount: ");
                     amount = sc.nextDouble();
 
                     depositMoney(
