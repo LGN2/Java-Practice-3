@@ -21,7 +21,7 @@ public class BankAccountSystem1 {
         customerNames = new ArrayList<>();
         balances = new ArrayList<>();
 
-        
+
         accountNumbers.add(1001);
         customerNames.add("Almajd Salim");
         balances.add(1500.0);
@@ -41,5 +41,77 @@ public class BankAccountSystem1 {
         accountNumbers.add(1005);
         customerNames.add("Emily Brown");
         balances.add(5000.0);
+
+
+        do {
+
+            IO.println("\n========== BANK ACCOUNT SYSTEM ==========");
+            IO.println("1. Display All Accounts");
+            IO.println("2. Deposit Money");
+            IO.println("3. Withdraw Money");
+            IO.println("4. Check Account Balance");
+            IO.println("5. Display Account Statistics");
+            IO.println("6. Exit");
+            IO.print("Enter your choice: ");
+
+            choice = sc.nextInt();
+
+            switch (choice) {
+
+                case 1:
+
+                    displayAccounts(accountNumbers, customerNames, balances);
+                    break;
+
+                case 2:
+
+                    System.out.print("Enter Account Number: ");
+                    accountNumber = sc.nextInt();
+
+                    System.out.print("Enter Deposit Amount: ");
+                    amount = sc.nextDouble();
+
+                    depositMoney(accountNumbers, balances, accountNumber, amount);
+                    break;
+
+                case 3:
+
+                    System.out.print("Enter Account Number: ");
+                    accountNumber = sc.nextInt();
+
+                    System.out.print("Enter Withdrawal Amount: ");
+                    amount = sc.nextDouble();
+
+                    withdrawMoney(accountNumbers, balances, accountNumber, amount);
+                    break;
+
+                case 4:
+
+                    System.out.print("Enter Account Number: ");
+                    accountNumber = sc.nextInt();
+
+                    checkBalance(accountNumbers, balances, accountNumber);
+                    break;
+
+                case 5:
+
+                    calculateStatistics(balances);
+                    break;
+
+                case 6:
+
+                    System.out.println("Thank you for using the Bank Account System.");
+                    break;
+
+                default:
+
+                    System.out.println("Invalid Menu Choice.");
+
+            }
+
+        } while (choice != 6);
+
+        sc.close();
     }
+
 }
