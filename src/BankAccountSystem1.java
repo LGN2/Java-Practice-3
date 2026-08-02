@@ -113,5 +113,20 @@ public class BankAccountSystem1 {
 
         sc.close();
     }
+    public static void displayAccounts(
+            ArrayList<Integer> accountNumbers,
+            ArrayList<String> customerNames,
+            ArrayList<Double> balances) {
+
+        System.out.println("\n========== ACCOUNT LIST ==========");
+
+        for (Integer i = 0; i < accountNumbers.size(); i++) {
+
+            System.out.println("--------------------------------");
+            System.out.println("Account Number : " + accountNumbers.get(i));
+            System.out.println("Customer Name  : " + customerNames.get(i));
+            System.out.println("Balance        : $" + balances.get(i));
+        }
+    }
 
 }
