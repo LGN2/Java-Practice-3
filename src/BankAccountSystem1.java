@@ -188,5 +188,27 @@ public class BankAccountSystem1 {
             System.out.println("Account Not Found.");
         }
     }
+    public static void checkBalance(
+            ArrayList<Integer> accountNumbers,
+            ArrayList<Double> balances,
+            Integer accountNumber) {
+
+        Boolean found = false;
+
+        for (Integer i = 0; i < accountNumbers.size(); i++) {
+
+            if (accountNumbers.get(i).equals(accountNumber)) {
+
+                System.out.println("Current Balance: $" + balances.get(i));
+
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Account Not Found.");
+        }
+    }
 
 }
