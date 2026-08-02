@@ -113,12 +113,13 @@ public class BankAccountSystem1 {
 
         sc.close();
     }
+
     public static void displayAccounts(
             ArrayList<Integer> accountNumbers,
             ArrayList<String> customerNames,
             ArrayList<Double> balances) {
 
-        System.out.println("\n========== ACCOUNT LIST ==========");
+        IO.println("\n========== ACCOUNT LIST ==========");
 
         for (Integer i = 0; i < accountNumbers.size(); i++) {
 
