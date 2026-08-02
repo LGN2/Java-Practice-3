@@ -123,10 +123,10 @@ public class BankAccountSystem1 {
 
         for (Integer i = 0; i < accountNumbers.size(); i++) {
 
-            System.out.println("--------------------------------");
-            System.out.println("Account Number : " + accountNumbers.get(i));
-            System.out.println("Customer Name  : " + customerNames.get(i));
-            System.out.println("Balance        : $" + balances.get(i));
+            IO.println("--------------------------------");
+            IO.println("Account Number : " + accountNumbers.get(i));
+            IO.println("Customer Name  : " + customerNames.get(i));
+            IO.println("Balance        : $" + balances.get(i));
         }
     }
     public static void depositMoney(
