@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProductInventorySystem {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // Create scanner
         Scanner input = new Scanner(System.in);
 
@@ -53,6 +53,7 @@ public class ProductInventorySystem {
 
         input.close();
     }
+
     public static Double calculateTotalValue(
             ArrayList<Double> productPrices,
             ArrayList<Integer> productQuantities) {
@@ -66,6 +67,7 @@ public class ProductInventorySystem {
 
         return totalValue;
     }
+
     public static String checkStockStatus(Integer quantity) {
 
         if (quantity > 10) {
@@ -76,6 +78,7 @@ public class ProductInventorySystem {
             return "Out of Stock";
         }
     }
+
     public static Integer[] countStockStatus(
             ArrayList<Integer> productQuantities) {
 
@@ -96,6 +99,7 @@ public class ProductInventorySystem {
                 outOfStockProducts
         };
     }
+
     public static String findMostExpensiveProduct(
             ArrayList<String> productNames,
             ArrayList<Double> productPrices) {
@@ -113,7 +117,9 @@ public class ProductInventorySystem {
         }
 
         return productName;
-    }public static void displayReport(
+    }
+
+    public static void displayReport(
 
             ArrayList<String> productNames,
             ArrayList<Double> productPrices,
