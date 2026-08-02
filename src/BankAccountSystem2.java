@@ -235,7 +235,7 @@ public class BankAccountSystem2 {
 
             if (accountNumbers.get(i).equals(accountNumber)) {
 
-                System.out.println("Current Balance: $" + accountBalances.get(i));
+                IO.println("Current Balance: $" + accountBalances.get(i));
 
                 found = true;
                 break;
@@ -244,7 +244,7 @@ public class BankAccountSystem2 {
 
         if (!found) {
 
-            System.out.println("Account Not Found.");
+            IO.println("Account Not Found.");
         }
     }
     public static void calculateStatistics(
