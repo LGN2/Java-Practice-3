@@ -68,7 +68,7 @@ public class BankAccountSystem1 {
                     IO.print("Enter Account Number: ");
                     accountNumber = sc.nextInt();
 
-                    System.out.print("Enter Deposit Amount: ");
+                    IO.print("Enter Deposit Amount: ");
                     amount = sc.nextDouble();
 
                     depositMoney(accountNumbers, balances, accountNumber, amount);
