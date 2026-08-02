@@ -249,4 +249,38 @@ public class BankAccountSystem2 {
             System.out.println("Account Not Found.");
         }
     }
+    public static void calculateStatistics(
+            ArrayList<Double> accountBalances) {
+
+        Double totalMoney = 0.0;
+        Double highestBalance = accountBalances.get(0);
+        Double lowestBalance = accountBalances.get(0);
+        Integer accountsAbove2000 = 0;
+
+        for (Double balance : accountBalances) {
+
+            totalMoney += balance;
+
+            if (balance > highestBalance) {
+
+                highestBalance = balance;
+            }
+
+            if (balance < lowestBalance) {
+
+                lowestBalance = balance;
+            }
+
+            if (balance > 2000) {
+
+                accountsAbove2000++;
+            }
+        }
+
+        System.out.println("\n========== ACCOUNT STATISTICS ==========");
+        System.out.println("Total Money                 : $" + totalMoney);
+        System.out.println("Highest Account Balance     : $" + highestBalance);
+        System.out.println("Lowest Account Balance      : $" + lowestBalance);
+        System.out.println("Accounts Above $2000 Balance: " + accountsAbove2000);
+    }
 }
