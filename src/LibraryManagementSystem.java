@@ -98,7 +98,7 @@ public class LibraryManagementSystem {
 
                 case 4:
 
-                    System.out.print("Enter Book Name to Return: ");
+                    IO.print("Enter Book Name to Return: ");
                     bookName = sc.nextLine();
 
                     returnBook(bookNames, bookAvailability, bookName);
@@ -117,12 +117,12 @@ public class LibraryManagementSystem {
 
                 case 6:
 
-                    System.out.println("Program Ended.");
+                    IO.println("Program Ended.");
                     break;
 
                 default:
 
-                    System.out.println("Invalid Choice.");
+                    IO.println("Invalid Choice.");
 
             }
 
