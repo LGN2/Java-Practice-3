@@ -275,10 +275,10 @@ public class BankAccountSystem2 {
             }
         }
 
-        System.out.println("\n========== ACCOUNT STATISTICS ==========");
-        System.out.println("Total Money                 : $" + totalMoney);
-        System.out.println("Highest Account Balance     : $" + highestBalance);
-        System.out.println("Lowest Account Balance      : $" + lowestBalance);
-        System.out.println("Accounts Above $2000 Balance: " + accountsAbove2000);
+        IO.println("\n========== ACCOUNT STATISTICS ==========");
+        IO.println("Total Money                 : $" + totalMoney);
+        IO.println("Highest Account Balance     : $" + highestBalance);
+        IO.println("Lowest Account Balance      : $" + lowestBalance);
+        IO.println("Accounts Above $2000 Balance: " + accountsAbove2000);
     }
 }
