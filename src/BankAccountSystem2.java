@@ -114,7 +114,7 @@ public class BankAccountSystem2 {
                 case 4:
 
                     System.out.print("Enter Account Number: ");
-                    accountNumber = input.nextInt();
+                    accountNumber = sc.nextInt();
 
                     checkBalance(
                             accountNumbers,
@@ -139,6 +139,6 @@ public class BankAccountSystem2 {
 
         } while (choice != 6);
 
-        input.close();
+        sc.close();
     }
 }
