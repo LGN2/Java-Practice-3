@@ -87,7 +87,7 @@ public class BankAccountSystem2 {
                     accountNumber = sc.nextInt();
 
                     System.out.print("Enter Deposit Amount: ");
-                    amount = input.nextDouble();
+                    amount = sc.nextDouble();
 
                     depositMoney(
                             accountNumbers,
@@ -99,10 +99,10 @@ public class BankAccountSystem2 {
                 case 3:
 
                     System.out.print("Enter Account Number: ");
-                    accountNumber = input.nextInt();
+                    accountNumber = sc.nextInt();
 
                     System.out.print("Enter Withdrawal Amount: ");
-                    amount = input.nextDouble();
+                    amount = sc.nextDouble();
 
                     withdrawMoney(
                             accountNumbers,
