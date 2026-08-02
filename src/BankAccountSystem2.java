@@ -58,16 +58,18 @@ public class BankAccountSystem2 {
         accountNumbers.add(1010);
         customerNames.add("Michael White");
         accountBalances.add(2800.0);
+
+
         do {
 
-            System.out.println("\n========== BANK ACCOUNT SYSTEM ==========");
-            System.out.println("1. Display All Accounts");
-            System.out.println("2. Deposit Money");
-            System.out.println("3. Withdraw Money");
-            System.out.println("4. Check Account Balance");
-            System.out.println("5. Display Account Statistics");
-            System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
+            IO.println("\n========== BANK ACCOUNT SYSTEM ==========");
+            IO.println("1. Display All Accounts");
+            IO.println("2. Deposit Money");
+            IO.println("3. Withdraw Money");
+            IO.println("4. Check Account Balance");
+            IO.println("5. Display Account Statistics");
+            IO.println("6. Exit");
+            IO.println("Enter your choice: ");
 
             choice = sc.nextInt();
 
