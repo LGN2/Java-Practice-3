@@ -2,9 +2,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LibraryManagementSystem {
-    public static void main(String[] args){
-        Scanner input = new Scanner(System.in);
 
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        // Declare variables
         ArrayList<String> bookNames;
         ArrayList<String> authorNames;
         ArrayList<Boolean> bookAvailability;
@@ -13,6 +16,7 @@ public class LibraryManagementSystem {
         String bookName;
         Integer[] bookCounts;
 
+        // Create lists
         bookNames = new ArrayList<>();
         authorNames = new ArrayList<>();
         bookAvailability = new ArrayList<>();
@@ -57,5 +61,226 @@ public class LibraryManagementSystem {
         bookNames.add("Cyber Security");
         authorNames.add("Daniel Green");
         bookAvailability.add(true);
+
+        // Repeat menu until Exit
+        do {
+
+            System.out.println("\n========== LIBRARY MENU ==========");
+            System.out.println("1. Display All Books");
+            System.out.println("2. Search Book");
+            System.out.println("3. Borrow Book");
+            System.out.println("4. Return Book");
+            System.out.println("5. Display Library Report");
+            System.out.println("6. Exit");
+            System.out.print("Enter your choice: ");
+
+            choice = sc.nextInt();
+            sc.nextLine();
+
+            switch (choice) {
+
+                case 1:
+
+                    displayBooks(bookNames, authorNames, bookAvailability);
+                    break;
+
+                case 2:
+
+                    System.out.print("Enter Book Name: ");
+                    bookName = sc.nextLine();
+
+                    searchBook(bookNames, authorNames, bookAvailability, bookName);
+                    break;
+
+                case 3:
+
+                    System.out.print("Enter Book Name to Borrow: ");
+                    bookName = sc.nextLine();
+
+                    borrowBook(bookNames, bookAvailability, bookName);
+                    break;
+
+                case 4:
+
+                    System.out.print("Enter Book Name to Return: ");
+                    bookName = sc.nextLine();
+
+                    returnBook(bookNames, bookAvailability, bookName);
+                    break;
+
+                case 5:
+
+                    bookCounts = countBooks(bookAvailability);
+
+                    displayReport(
+                            bookNames.size(),
+                            bookCounts[0],
+                            bookCounts[1]);
+
+                    break;
+
+                case 6:
+
+                    System.out.println("Program Ended.");
+                    break;
+
+                default:
+
+                    System.out.println("Invalid Choice.");
+
+            }
+
+        } while (choice != 6);
+
+        sc.close();
+    }
+
+    // Display all books
+    public static void displayBooks(
+            ArrayList<String> bookNames,
+            ArrayList<String> authorNames,
+            ArrayList<Boolean> bookAvailability) {
+
+        System.out.println("\n========== BOOK LIST ==========");
+
+        for (Integer i = 0; i < bookNames.size(); i++) {
+
+            System.out.println("--------------------------------");
+            System.out.println("Book Name : " + bookNames.get(i));
+            System.out.println("Author    : " + authorNames.get(i));
+
+            if (bookAvailability.get(i)) {
+                System.out.println("Status    : Available");
+            } else {
+                System.out.println("Status    : Unavailable");
+            }
+        }
+    }
+
+    // Search for a book
+    public static void searchBook(
+            ArrayList<String> bookNames,
+            ArrayList<String> authorNames,
+            ArrayList<Boolean> bookAvailability,
+            String bookName) {
+
+        Boolean found = false;
+
+        for (Integer i = 0; i < bookNames.size(); i++) {
+
+            if (bookNames.get(i).equalsIgnoreCase(bookName)) {
+
+                System.out.println("\nBook Found");
+                System.out.println("Book Name : " + bookNames.get(i));
+                System.out.println("Author    : " + authorNames.get(i));
+
+                if (bookAvailability.get(i)) {
+                    System.out.println("Status    : Available");
+                } else {
+                    System.out.println("Status    : Unavailable");
+                }
+
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Book Not Found.");
+        }
+    }
+
+    // Borrow a book
+    public static void borrowBook(
+            ArrayList<String> bookNames,
+            ArrayList<Boolean> bookAvailability,
+            String bookName) {
+
+        Boolean found = false;
+
+        for (Integer i = 0; i < bookNames.size(); i++) {
+
+            if (bookNames.get(i).equalsIgnoreCase(bookName)) {
+
+                found = true;
+
+                if (bookAvailability.get(i)) {
+
+                    bookAvailability.set(i, false);
+                    System.out.println("Book Borrowed Successfully.");
+
+                } else {
+
+                    System.out.println("Book Is Already Borrowed.");
+                }
+
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Book Not Found.");
+        }
+    }
+
+    // Return a book
+    public static void returnBook(
+            ArrayList<String> bookNames,
+            ArrayList<Boolean> bookAvailability,
+            String bookName) {
+
+        Boolean found = false;
+
+        for (Integer i = 0; i < bookNames.size(); i++) {
+
+            if (bookNames.get(i).equalsIgnoreCase(bookName)) {
+
+                found = true;
+
+                bookAvailability.set(i, true);
+
+                System.out.println("Book Returned Successfully.");
+
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Book Not Found.");
+        }
+    }
+
+    // Count available and unavailable books
+    public static Integer[] countBooks(
+            ArrayList<Boolean> bookAvailability) {
+
+        Integer availableBooks = 0;
+        Integer unavailableBooks = 0;
+
+        for (Boolean status : bookAvailability) {
+
+            if (status) {
+                availableBooks++;
+            } else {
+                unavailableBooks++;
+            }
+        }
+
+        return new Integer[]{
+                availableBooks,
+                unavailableBooks
+        };
+    }
+
+    // Display library report
+    public static void displayReport(
+            Integer totalBooks,
+            Integer availableBooks,
+            Integer unavailableBooks) {
+
+        System.out.println("\n========== LIBRARY REPORT ==========");
+        System.out.println("Total Books       : " + totalBooks);
+        System.out.println("Available Books   : " + availableBooks);
+        System.out.println("Unavailable Books : " + unavailableBooks);
     }
 }
