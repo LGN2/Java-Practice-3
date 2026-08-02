@@ -173,12 +173,12 @@ public class BankAccountSystem1 {
 
                     balances.set(i, balances.get(i) - amount);
 
-                    System.out.println("Withdrawal Successful.");
-                    System.out.println("Remaining Balance: $" + balances.get(i));
+                    IO.println("Withdrawal Successful.");
+                    IO.println("Remaining Balance: $" + balances.get(i));
 
                 } else {
 
-                    System.out.println("Insufficient Balance.");
+                    IO.println("Insufficient Balance.");
                 }
 
                 break;
