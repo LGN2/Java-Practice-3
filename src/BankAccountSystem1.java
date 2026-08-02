@@ -143,8 +143,8 @@ public class BankAccountSystem1 {
 
                 balances.set(i, balances.get(i) + amount);
 
-                System.out.println("Deposit Successful.");
-                System.out.println("New Balance: $" + balances.get(i));
+                IO.println("Deposit Successful.");
+                IO.println("New Balance: $" + balances.get(i));
 
                 found = true;
                 break;
@@ -152,7 +152,7 @@ public class BankAccountSystem1 {
         }
 
         if (!found) {
-            System.out.println("Account Not Found.");
+            IO.println("Account Not Found.");
         }
     }
     public static void withdrawMoney(
