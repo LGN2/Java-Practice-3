@@ -82,7 +82,7 @@ public class LibraryManagementSystem {
 
                 case 2:
 
-                    System.out.print("Enter Book Name: ");
+                    IO.print("Enter Book Name: ");
                     bookName = sc.nextLine();
 
                     searchBook(bookNames, authorNames, bookAvailability, bookName);
@@ -90,7 +90,7 @@ public class LibraryManagementSystem {
 
                 case 3:
 
-                    System.out.print("Enter Book Name to Borrow: ");
+                    IO.print("Enter Book Name to Borrow: ");
                     bookName = sc.nextLine();
 
                     borrowBook(bookNames, bookAvailability, bookName);
