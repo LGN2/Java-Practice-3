@@ -128,5 +128,31 @@ public class BankAccountSystem1 {
             System.out.println("Balance        : $" + balances.get(i));
         }
     }
+    public static void depositMoney(
+            ArrayList<Integer> accountNumbers,
+            ArrayList<Double> balances,
+            Integer accountNumber,
+            Double amount) {
+
+        Boolean found = false;
+
+        for (Integer i = 0; i < accountNumbers.size(); i++) {
+
+            if (accountNumbers.get(i).equals(accountNumber)) {
+
+                balances.set(i, balances.get(i) + amount);
+
+                System.out.println("Deposit Successful.");
+                System.out.println("New Balance: $" + balances.get(i));
+
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Account Not Found.");
+        }
+    }
 
 }
