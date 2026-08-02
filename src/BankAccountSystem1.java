@@ -100,7 +100,7 @@ public class BankAccountSystem1 {
 
                 case 6:
 
-                    System.out.println("Thank you for using the Bank Account System.");
+                    IO.println("Thank you for using the Bank Account System.");
                     break;
 
                 default:
