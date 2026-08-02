@@ -137,18 +137,18 @@ public class LibraryManagementSystem {
             ArrayList<String> authorNames,
             ArrayList<Boolean> bookAvailability) {
 
-        System.out.println("\n========== BOOK LIST ==========");
+        IO.println("\n========== BOOK LIST ==========");
 
         for (Integer i = 0; i < bookNames.size(); i++) {
 
-            System.out.println("--------------------------------");
-            System.out.println("Book Name : " + bookNames.get(i));
-            System.out.println("Author    : " + authorNames.get(i));
+            IO.println("--------------------------------");
+            IO.println("Book Name : " + bookNames.get(i));
+            IO.println("Author    : " + authorNames.get(i));
 
             if (bookAvailability.get(i)) {
-                System.out.println("Status    : Available");
+                IO.println("Status    : Available");
             } else {
-                System.out.println("Status    : Unavailable");
+                IO.println("Status    : Unavailable");
             }
         }
     }
