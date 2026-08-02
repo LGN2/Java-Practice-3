@@ -79,7 +79,7 @@ public class BankAccountSystem1 {
                     IO.print("Enter Account Number: ");
                     accountNumber = sc.nextInt();
 
-                    System.out.print("Enter Withdrawal Amount: ");
+                    IO.print("Enter Withdrawal Amount: ");
                     amount = sc.nextDouble();
 
                     withdrawMoney(accountNumbers, balances, accountNumber, amount);
