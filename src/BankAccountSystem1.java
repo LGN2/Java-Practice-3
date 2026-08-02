@@ -76,7 +76,7 @@ public class BankAccountSystem1 {
 
                 case 3:
 
-                    System.out.print("Enter Account Number: ");
+                    IO.print("Enter Account Number: ");
                     accountNumber = sc.nextInt();
 
                     System.out.print("Enter Withdrawal Amount: ");
