@@ -100,10 +100,10 @@ public class BankAccountSystem2 {
 
                 case 3:
 
-                    System.out.print("Enter Account Number: ");
+                    IO.print("Enter Account Number: ");
                     accountNumber = sc.nextInt();
 
-                    System.out.print("Enter Withdrawal Amount: ");
+                    IO.print("Enter Withdrawal Amount: ");
                     amount = sc.nextDouble();
 
                     withdrawMoney(
@@ -115,7 +115,7 @@ public class BankAccountSystem2 {
 
                 case 4:
 
-                    System.out.print("Enter Account Number: ");
+                    IO.print("Enter Account Number: ");
                     accountNumber = sc.nextInt();
 
                     checkBalance(
