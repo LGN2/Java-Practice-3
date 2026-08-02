@@ -243,7 +243,7 @@ public class LibraryManagementSystem {
         }
     }
 
-    // Count available and unavailable books
+
     public static Integer[] countBooks(
             ArrayList<Boolean> bookAvailability) {
 
@@ -265,15 +265,14 @@ public class LibraryManagementSystem {
         };
     }
 
-    // Display library report
     public static void displayReport(
             Integer totalBooks,
             Integer availableBooks,
             Integer unavailableBooks) {
 
-        System.out.println("\n========== LIBRARY REPORT ==========");
-        System.out.println("Total Books       : " + totalBooks);
-        System.out.println("Available Books   : " + availableBooks);
-        System.out.println("Unavailable Books : " + unavailableBooks);
+        IO.println("\n========== LIBRARY REPORT ==========");
+        IO.println("Total Books       : " + totalBooks);
+        IO.println("Available Books   : " + availableBooks);
+        IO.println("Unavailable Books : " + unavailableBooks);
     }
 }
