@@ -204,15 +204,14 @@ public class BankAccountSystem2 {
 
                 if (accountBalances.get(i) >= amount) {
 
-                    accountBalances.set(i,
-                            accountBalances.get(i) - amount);
+                    accountBalances.set(i,accountBalances.get(i) - amount);
 
-                    System.out.println("Withdrawal Successful.");
-                    System.out.println("Remaining Balance: $" + accountBalances.get(i));
+                    IO.println("Withdrawal Successful.");
+                    IO.println("Remaining Balance: $" + accountBalances.get(i));
 
                 } else {
 
-                    System.out.println("Insufficient Balance.");
+                    IO.println("Insufficient Balance.");
                 }
 
                 break;
@@ -221,7 +220,7 @@ public class BankAccountSystem2 {
 
         if (!found) {
 
-            System.out.println("Account Not Found.");
+            IO.println("Account Not Found.");
         }
     }
 
