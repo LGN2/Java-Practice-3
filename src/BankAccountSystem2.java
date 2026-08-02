@@ -172,11 +172,10 @@ public class BankAccountSystem2 {
 
             if (accountNumbers.get(i).equals(accountNumber)) {
 
-                accountBalances.set(i,
-                        accountBalances.get(i) + amount);
+                accountBalances.set(i,accountBalances.get(i) + amount);
 
-                System.out.println("Deposit Successful.");
-                System.out.println("New Balance: $" + accountBalances.get(i));
+                IO.println("Deposit Successful.");
+                IO.println("New Balance: $" + accountBalances.get(i));
 
                 found = true;
                 break;
