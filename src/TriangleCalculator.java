@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class TriangleCalculator {
+
     public static void main(String[] args) {
+        
         Double base;
         Double height;
         Double area = 0.0;
@@ -32,6 +34,7 @@ public class TriangleCalculator {
         } else {
             type = "Scalene";
         }
+
         IO.println("The base: " + base);
         IO.println("The Height: " + height);
         IO.println("The Side A: " + a);

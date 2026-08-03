@@ -28,7 +28,7 @@ public class TrapezoidCalculator {
         Scanner l02 = new Scanner(System.in);
         IO.println("Enter the leg 2:");
         l2 = l02.nextDouble();
-        
+
         Scanner h1 = new Scanner(System.in);
         IO.println("Enter the Height:");
         height = h1.nextDouble();
