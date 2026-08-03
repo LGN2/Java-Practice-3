@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
 public class TrapezoidCalculator {
+
     public static void main(String[] args) {
+
         Double b1;
         Double b2;
         Double l1;
@@ -14,15 +16,19 @@ public class TrapezoidCalculator {
         Scanner b01 = new Scanner(System.in);
         IO.println("Enter the base 1:");
         b1 = b01.nextDouble();
+
         Scanner b02 = new Scanner(System.in);
         IO.println("Enter the base 2:");
         b2 = b02.nextDouble();
+
         Scanner l01 = new Scanner(System.in);
         IO.println("Enter the leg 1:");
         l1 = l01.nextDouble();
+
         Scanner l02 = new Scanner(System.in);
         IO.println("Enter the leg 2:");
         l2 = l02.nextDouble();
+        
         Scanner h1 = new Scanner(System.in);
         IO.println("Enter the Height:");
         height = h1.nextDouble();
