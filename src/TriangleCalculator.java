@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class TriangleCalculator {
 
     public static void main(String[] args) {
-        
+
         Double base;
         Double height;
         Double area = 0.0;
