@@ -183,7 +183,7 @@ public class LibraryManagementSystem {
             IO.println("Book Not Found.");
         }
     }
-    
+
     public static void borrowBook(
             ArrayList<String> bookNames,
             ArrayList<Boolean> bookAvailability,
