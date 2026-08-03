@@ -15,7 +15,7 @@ public class BankAccountSystem1 {
         Integer choice;
         Integer accountNumber;
         Double amount;
-        
+
         accountNumbers = new ArrayList<>();
         customerNames = new ArrayList<>();
         balances = new ArrayList<>();
