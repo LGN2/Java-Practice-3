@@ -58,5 +58,5 @@ public class EmployeeSalaryCalculator {
         System.out.println("Net Salary: " + netSalary);
         System.out.println("Salary Status: " + salaryStatus);
     }
-    
+
 }

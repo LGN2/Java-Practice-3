@@ -68,8 +68,7 @@ public class NumberListStatistics {
             totalSum += number;
 
             avg = (Integer) totalSum / numbers.size();
-
-
+            
         }
         for (Integer number : numbers) {
             IO.println(number);
