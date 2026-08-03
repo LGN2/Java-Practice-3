@@ -19,11 +19,8 @@ public class StudentResultAnalyzer {
         if (validateMarks(math, english, science)) {
 
             totalMarks = calculateTotal(math, english, science);
-
             averageMarks = calculateAverage(totalMarks, subNum);
-
             finalGrade = calculateGrade(averageMarks);
-
             performanceStatus = checkPerformance(finalGrade);
 
             displayReport(

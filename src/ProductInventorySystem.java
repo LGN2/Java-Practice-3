@@ -5,7 +5,7 @@ public class ProductInventorySystem {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        
+
         ArrayList<String> productNames;
         ArrayList<Double> productPrices;
         ArrayList<Integer> productQuantities;
