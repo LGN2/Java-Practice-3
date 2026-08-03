@@ -14,7 +14,7 @@ public class CircleCalculator {
         Scanner sc = new Scanner(System.in);
         IO.println("Enter the Radius of the circle:");
         radius = sc.nextDouble();
-        
+
         if (radius <= 0) {
             IO.println("Invalid radius must be greater than zero.");
         } else {
