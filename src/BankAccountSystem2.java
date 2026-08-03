@@ -58,8 +58,7 @@ public class BankAccountSystem2 {
         accountNumbers.add(1010);
         customerNames.add("Michael White");
         accountBalances.add(2800.0);
-
-
+        
         do {
 
             IO.println("\n========== BANK ACCOUNT SYSTEM ==========");
